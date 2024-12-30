@@ -1,0 +1,305 @@
+/* Общие стили для всего документа */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Шрифт */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    background-color: #f4f4f9; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    line-height: 1.2; /* Межстрочный интервал */
+}
+
+/* Стили для шапки сайта */
+header {
+    background-color: #2c3e50; /* Цвет фона шапки */
+    color: #fff; /* Цвет текста в шапке */
+    padding: 20px 0; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+header h1 {
+    font-size: 30px; /* Размер шрифта заголовка */
+}
+
+/* Стили для основного контента */
+main {
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+/* Стили для сетки секций */
+.sections-grid {
+    display: grid; /* Используем сетку */
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 0; /* Отсутствие отступов между секциями */
+}
+
+/* Стили для секций */
+section {
+    background-color: #fff; /* Цвет фона секций */
+    padding: 40px 80px; /* Внутренние отступы: 40px сверху и снизу, 80px слева и справа */
+    border: none; /* Убираем границы */
+    box-shadow: none; /* Убираем тени */
+}
+
+/* Плавные переходы между секциями */
+section:not(:last-child) {
+    margin-bottom: 0; /* Убираем отступы между секциями */
+}
+
+/* Стили для первой секции: текст слева, фото справа */
+.profile-section {
+    display: flex; /* Используем Flexbox */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: space-between; /* Текст слева, фото справа */
+    gap: 40px; /* Отступ между текстом и фото */
+    background-image: url('images/Profile.jpg'); /* Путь к фоновому изображению */
+    background-size: cover; /* Растягиваем изображение на всю секцию */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Запрещаем повторение изображения */
+    padding: 40px 80px; /* Внутренние отступы для текста */
+    color: #fff; /* Белый цвет текста */
+    position: relative; /* Для наложения градиента */
+    overflow: hidden; /* Скрываем размытые края */
+}
+
+/* Размытие краёв изображения в первой секции */
+.profile-section::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Смещаем вниз для размытия */
+    left: 0;
+    right: 0;
+    height: 20px; /* Высота размытия */
+    background: inherit; /* Наследуем фон */
+    filter: blur(10px); /* Размытие */
+}
+
+/* Стили для текста и ссылок в первой секции */
+.profile-section h1,
+.profile-section h2,
+.profile-section p,
+.profile-section a {
+    color: #fff; /* Белый цвет текста и ссылок */
+}
+
+.profile-section a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для фото в первой секции */
+.profile-image img {
+    max-width: 250px; /* Максимальная ширина фото */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 50%; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Адаптивные стили для мобильной версии */
+@media (max-width: 768px) {
+    /* Стили для первой секции в мобильной версии */
+    .profile-section {
+        flex-direction: column; /* Текст и фото располагаются вертикально */
+        text-align: center; /* Выравнивание текста по центру */
+        padding: 20px 10px; /* Уменьшаем отступы */
+    }
+
+    /* Стили для фото в первой секции в мобильной версии */
+    .profile-image img {
+        margin-top: 20px; /* Отступ сверху для фото */
+        max-width: 150px; /* Уменьшаем ширину фото для мобильной версии */
+    }
+
+    /* Стили для текста в первой секции в мобильной версии */
+    .text-content {
+        margin-top: 20px; /* Отступ сверху для текста */
+    }
+}
+
+/* Стили для второй секции: текст */
+.text-section {
+    background-image: 
+        url('images/section2.jpg'), 
+        url('images/section2.3.jpg'), 
+        url('images/section2.4.jpg'); /* Три фоновых изображения */
+    background-size: 100% 33.33%, 100% 33.33%, 100% 33.33%; /* Каждое изображение занимает 1/3 высоты секции */
+    background-position: top, center, bottom; /* Расположение изображений: сверху, по центру, снизу */
+    background-repeat: no-repeat; /* Запрещаем повторение изображений */
+    padding: 40px 80px; /* Внутренние отступы для текста */
+    color: #fff; /* Белый цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    position: relative; /* Для наложения градиента */
+    overflow: hidden; /* Скрываем размытые края */
+}
+
+/* Полупрозрачный фон для текста */
+.text-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный чёрный фон */
+    z-index: 1; /* Фон под текстом */
+}
+
+/* Стили для текста и ссылок во второй секции */
+.text-section h3,
+.text-section p,
+.text-section a {
+    color: #fff; /* Белый цвет текста и ссылок */
+    position: relative; /* Чтобы текст был поверх полупрозрачного фона */
+    z-index: 2; /* Текст поверх фона */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+.text-section a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для третьей секции: Скриншоты */
+.screenshots-section {
+    background-color: #f9f9f9; /* Светлый фон секции */
+    padding: 40px 80px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Стили для заголовков в третьей секции */
+.screenshots-section h3 {
+    color: #2c3e50; /* Тёмно-синий цвет заголовков */
+    font-size: 25px; /* Размер шрифта заголовков */
+    margin-bottom: 40px; /* Отступ снизу для заголовков */
+}
+
+/* Стили для контейнера миниатюр */
+.thumbnail-container {
+    display: flex; /* Используем Flexbox */
+    flex-wrap: wrap; /* Переносим элементы на новую строку */
+    gap: 20px; /* Отступ между картинками */
+    justify-content: center; /* Выравниваем элементы по центру */
+    margin-bottom: 40px; /* Отступ снизу */
+    padding: 0 20px; /* Добавляем отступы слева и справа, чтобы картинки не выходили за край */
+    box-sizing: border-box; /* Учитываем padding в общей ширине */
+}
+
+/* Стили для миниатюр */
+.thumbnail {
+    max-width: 100%; /* Максимальная ширина изображений */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s ease; /* Плавный переход */
+    flex: 1 1 calc(33.333% - 40px); /* Гибкая ширина картинок с учетом отступов */
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+
+/* Уменьшаем масштаб при наведении */
+.thumbnail:hover {
+    transform: scale(0.99); /* Уменьшение масштаба */
+}
+
+/* Адаптивные стили для мобильной версии */
+@media (max-width: 768px) {
+    /* Стили для миниатюр в мобильной версии */
+    .thumbnail {
+        flex: 1 1 calc(50% - 10px); /* Картинки занимают половину ширины с учетом отступов */
+        margin: 5px; /* Отступы по 5 пикселей вокруг картинок */
+    }
+
+    .thumbnail-container {
+        gap: 10px; /* Уменьшаем отступ между картинками */
+        margin-bottom: 20px; /* Уменьшаем отступ снизу */
+        padding: 0 10px; /* Уменьшаем отступы слева и справа для мобильной версии */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Стили для миниатюр на очень маленьких экранах */
+    .thumbnail {
+        flex: 1 1 100%; /* Картинки занимают всю ширину */
+        margin: 5px; /* Отступы по 5 пикселей вокруг картинок */
+    }
+
+    .thumbnail-container {
+        padding: 0 5px; /* Минимальные отступы слева и справа */
+    }
+}
+
+/* Стили для кнопок прокрутки */
+.scroll-to-top,
+.scroll-to-bottom {
+    position: fixed; /* Фиксированное позиционирование */
+    background-color: #3498db; /* Цвет кнопок */
+    color: #fff; /* Цвет текста кнопок */
+    border: none; /* Убираем границы */
+    border-radius: 50%; /* Скругление углов */
+    width: 40px; /* Ширина кнопок */
+    height: 40px; /* Высота кнопок */
+    display: flex; /* Используем Flexbox */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: center; /* Выравниваем элементы по горизонтали */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 20px; /* Размер шрифта */
+    opacity: 0; /* Кнопки невидимы по умолчанию */
+    transition: opacity 0.3s ease; /* Плавный переход */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.scroll-to-top:hover,
+.scroll-to-bottom:hover {
+    opacity: 1; /* Кнопки появляются при наведении */
+}
+
+.scroll-to-top {
+    bottom: 20px; /* Отступ снизу */
+    right: 20px; /* Отступ справа */
+}
+
+.scroll-to-bottom {
+    top: 20px; /* Отступ сверху */
+    right: 20px; /* Отступ справа */
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #2c3e50; /* Цвет фона подвала */
+    color: #fff; /* Цвет текста в подвале */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px 0; /* Внутренние отступы */
+    margin-top: 0; /* Убираем отступ сверху */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+footer .bold-text {
+    font-weight: bold; /* Жирный текст */
+    color: #fff; /* Цвет текста */
+}
+
+footer a {
+    color: #fff; /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Универсальный стиль для увеличения отступов */
+.increased-spacing {
+    line-height: 1.8; /* Увеличиваем межстрочный интервал */
+    margin-bottom: 20px; /* Увеличиваем отступ снизу для абзацев */
+}
+
+.increased-spacing h1,
+.increased-spacing h2,
+.increased-spacing h3,
+.increased-spacing h4,
+.increased-spacing h5,
+.increased-spacing h6 {
+    margin-top: 80px; /* Увеличиваем отступ сверху для заголовков */
+    margin-bottom: 40px; /* Увеличиваем отступ снизу для заголовков */
+}
+
+.increased-spacing p {
+    margin-bottom: 25px; /* Увеличиваем отступ снизу для абзацев */
+}
