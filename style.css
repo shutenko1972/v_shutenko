@@ -46,6 +46,16 @@ p {
     line-height: 1.5; /* Межстрочный интервал */
 }
 
+/* Ссылки */
+a {
+    color: inherit; /* Цвет ссылки совпадает с цветом текста */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
 /* Шапка */
 header {
     background-color: #ffffff; /* Белый фон */
