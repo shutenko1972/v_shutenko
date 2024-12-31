@@ -3,17 +3,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1;
     color: #333; /* Темный цвет текста */
     background-color: #f4f4f4;
 }
 
 /* Заголовок h1 */
 h1 {
-    font-size: 40px; /* Размер текста */
+    font-size: 33px; /* Размер текста */
     color: #333; /* Темный цвет текста */
     margin: 0; /* Убираем отступы */
-    padding: 20px 0; /* Отступы внутри */
+    padding: 5px 0; /* Отступы внутри */
     text-align: center; /* Центрируем заголовок */
     background-color: #ffffff; /* Белый фон */
     font-weight: bold; /* Жирный шрифт */
@@ -21,7 +21,7 @@ h1 {
 
 /* Заголовок h2 */
 h2 {
-    font-size: 32px; /* Размер текста */
+    font-size: 28px; /* Размер текста */
     color: #333; /* Темный цвет текста */
     margin: 0; /* Убираем отступы */
     padding: 10px 0; /* Отступы внутри */
@@ -30,7 +30,7 @@ h2 {
 
 /* Заголовок h3 */
 h3 {
-    font-size: 24px; /* Размер текста */
+    font-size: 22px; /* Размер текста */
     color: #333; /* Темный цвет текста */
     margin: 0; /* Убираем отступы */
     padding: 5px 0; /* Отступы внутри */
@@ -41,7 +41,7 @@ h3 {
 p {
     font-size: 16px; /* Размер текста */
     color: #333; /* Темный цвет текста */
-    margin: 0 0 15px 0; /* Отступ снизу */
+    margin: 0 0 8px 0; /* Отступ снизу */
     padding: 0; /* Отступы внутри */
     line-height: 1.5; /* Межстрочный интервал */
 }
