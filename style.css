@@ -56,12 +56,59 @@ a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
 
-/* Шапка */
-header {
+/* Шапка с иконками */
+.programming-header {
     background-color: #ffffff; /* Белый фон */
     color: #333; /* Темный цвет текста */
-    padding: 0; /* Убираем отступы */
+    padding: 20px 0; /* Отступы внутри */
     text-align: center;
+    position: relative; /* Для позиционирования иконок */
+}
+
+.programming-header .programming-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Расстояние между иконками */
+    margin-bottom: 20px; /* Отступ снизу, чтобы отделить иконки от текста */
+    flex-wrap: wrap; /* Если иконок много, они переносятся на новую строку */
+}
+
+.programming-header .icon {
+    width: 30px; /* Размер иконок */
+    height: 30px;
+}
+
+.programming-header .header-content {
+    position: relative;
+    z-index: 2; /* Чтобы текст был поверх иконок */
+}
+
+/* Подвал с иконками */
+.programming-footer {
+    background-color: #ffffff; /* Белый фон */
+    color: #333; /* Темный цвет текста */
+    text-align: center;
+    padding: 20px 0; /* Отступы внутри */
+    margin: 0; /* Убираем отступы */
+    position: relative; /* Для позиционирования иконок */
+}
+
+.programming-footer .footer-content {
+    position: relative;
+    z-index: 2; /* Чтобы текст был поверх иконок */
+}
+
+.programming-footer .programming-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Расстояние между иконками */
+    margin-top: 10px; /* Отступ сверху */
+    flex-wrap: wrap; /* Если иконок много, они переносятся на новую строку */
+}
+
+.programming-footer .icon {
+    width: 30px; /* Размер иконок */
+    height: 30px;
 }
 
 /* Секции */
@@ -78,9 +125,9 @@ section {
 /* Контейнер для профиля в секции 1 */
 .profile-container {
     display: flex; /* Используем Flexbox */
-    justify-content: space-between; /* Распределение между текстом и картинкой */
+    justify-content: flex-start; /* Выравнивание по левому краю */
     align-items: flex-start; /* Выравнивание по верхнему краю */
-    gap: 40px; /* Расстояние между текстом и картинкой */
+    gap: 40px; /* Расстояние между элементами */
 }
 
 .profile-text {
@@ -90,6 +137,7 @@ section {
 .profile-image {
     max-width: 300px; /* Максимальная ширина аватарки */
     width: 100%; /* Адаптивная ширина */
+    order: -1; /* Фото будет первым элементом */
 }
 
 .profile-image img {
@@ -128,7 +176,7 @@ section {
 }
 
 .image-row img {
-    max-width: 48%; /* Картинки занимают почти половину ширины контейнера */
+    max-width: 48%; /* Картинки занимают почти половину ширину контейнера */
     height: auto; /* Сохраняем пропорции */
     object-fit: cover; /* Картинки заполняют пространство без искажений */
 }
@@ -198,22 +246,4 @@ section {
 /* Секция 5 с фоновой картинкой */
 #section5 {
     background-image: url('images/section5.jpg'); /* Путь к картинке в папке images */
-}
-
-/* Подвал */
-footer {
-    background-color: #ffffff; /* Белый фон */
-    color: #333; /* Темный цвет текста */
-    text-align: center;
-    padding: 20px 0; /* Отступы внутри */
-    margin: 0; /* Убираем отступы */
-}
-
-footer a {
-    color: #333; /* Темный цвет для ссылок */
-    text-decoration: none; /* Убрать подчеркивание */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
 }
