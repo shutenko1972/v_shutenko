@@ -1,13 +1,13 @@
 /* Основные переменные для стилей */
 :root {
     /* Размеры шрифтов */
-    --font-size-small: 14px; /* Маленький текст (подписи, мелкие детали) */
-    --font-size-medium: 16px; /* Средний текст (основной контент) */
-    --font-size-large: 18px; /* Большой текст (заголовки секций) */
-    --font-size-xlarge: 24px; /* Очень большой текст (главные заголовки) */
+    --font-size-small: 15px; /* Маленький текст (подписи, мелкие детали) */
+    --font-size-medium: 20px; /* Средний текст (основной контент) */
+    --font-size-large: 25px; /* Большой текст (заголовки секций) */
+    --font-size-xlarge: 30px; /* Очень большой текст (главные заголовки) */
 
     /* Отступы */
-    --padding-small: 10px; /* Маленькие отступы (между мелкими элементами) */
+    --padding-small: 6px; /* Маленькие отступы (между мелкими элементами) */
     --padding-medium: 20px; /* Средние отступы (между блоками) */
     --padding-large: 30px; /* Большие отступы (между крупными секциями) */
 
@@ -36,6 +36,57 @@ body {
     background-color: var(--color-background); /* Цвет фона */
     color: var(--color-text); /* Цвет текста */
     line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+}
+
+/* Стили для тега <h1> */
+h1 {
+    font-size: var(--font-size-xlarge); /* Очень большой текст */
+    line-height: var(--line-height-large); /* Расширенный межстрочный интервал */
+    margin-top: var(--padding-large); /* Отступ сверху */
+    margin-bottom: var(--padding-large); /* Отступ снизу */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Стили для тега <h2> */
+h2 {
+    font-size: var(--font-size-large); /* Большой текст */
+    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+    margin-top: var(--padding-medium); /* Отступ сверху */
+    margin-bottom: var(--padding-medium); /* Отступ снизу */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Стили для тега <h3> */
+h3 {
+    font-size: var(--font-size-medium); /* Средний текст */
+    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+    margin-top: var(--padding-medium); /* Отступ сверху */
+    margin-bottom: var(--padding-medium); /* Отступ снизу */
+    font-weight: bold; /* Жирный текст */
+}
+
+/* Стили для тега <p> */
+p {
+    font-size: var(--font-size-small); /* Маленький текст */
+    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+    margin-top: var(--padding-small); /* Отступ сверху */
+    margin-bottom: var(--padding-small); /* Отступ снизу */
+    font-weight: normal; /* Обычный текст */
+}
+
+/* Стили для тега <a> */
+a {
+    font-size: var(--font-size-small); /* Маленький текст */
+    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+    margin-top: 0; /* Отступ сверху */
+    margin-bottom: 0; /* Отступ снизу */
+    font-weight: normal; /* Обычный текст */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Стили для тега <a> при наведении */
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
 
 /* Шапка сайта */
@@ -93,24 +144,26 @@ section {
     overflow: hidden; /* Скрываем размытые края */
 }
 
-/* Регулировки для текста в секции профиля */
-.profile-section h1 {
-    font-size: var(--font-size-xlarge); /* Очень большой текст для заголовка */
-    line-height: var(--line-height-large); /* Расширенный межстрочный интервал */
-}
-
-.profile-section h2 {
-    font-size: var(--font-size-medium); /* Средний текст для подзаголовков */
-    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
-}
-
+/* Цвет ссылок в секции профиля */
 .profile-section a {
     color: var(--color-text-white); /* Белый цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
 }
 
-.profile-section a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column; /* Текст и фото располагаются вертикально */
+        text-align: center; /* Выравнивание текста по центру */
+        padding: var(--padding-medium); /* Уменьшаем отступы */
+        background-size: contain; /* Изменяем масштабирование для мобильных устройств */
+        background-position: top center; /* Позиционируем изображение вверху */
+        height: 300px; /* Фиксированная высота для мобильных устройств */
+    }
+
+    .profile-image img {
+        margin-top: var(--padding-medium); /* Отступ сверху для фото */
+        max-width: 150px; /* Уменьшаем ширину фото для мобильной версии */
+    }
 }
 
 /* Фото в секции профиля */
@@ -119,20 +172,6 @@ section {
     height: auto; /* Сохраняем пропорции */
     border-radius: 50%; /* Скругление углов */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
-}
-
-/* Адаптивные стили для секции профиля */
-@media (max-width: 768px) {
-    .profile-section {
-        flex-direction: column; /* Текст и фото располагаются вертикально */
-        text-align: center; /* Выравнивание текста по центру */
-        padding: var(--padding-medium); /* Уменьшаем отступы */
-    }
-
-    .profile-image img {
-        margin-top: var(--padding-medium); /* Отступ сверху для фото */
-        max-width: 150px; /* Уменьшаем ширину фото для мобильной версии */
-    }
 }
 
 /* Секция текста */
@@ -147,46 +186,16 @@ section {
     overflow: hidden; /* Скрываем размытые края */
 }
 
-/* Класс для включения жирного текста */
-.text-section.bold-text {
+/* Жирный текст для всех элементов внутри секции text-section */
+.text-section h3,
+.text-section p,
+.text-section a {
     font-weight: bold; /* Жирный текст */
 }
 
-/* Регулировки для текста в секции текста */
-.text-section h3 {
-    font-size: var(--font-size-large); /* Большой текст для заголовков */
-    line-height: var(--line-height-large); /* Расширенный межстрочный интервал */
-    color: var(--color-text); /* Тёмный цвет текста */
-}
-
-.text-section p {
-    font-size: var(--font-size-medium); /* Средний текст для абзацев */
-    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
-    color: var(--color-text); /* Тёмный цвет текста */
-}
-
+/* Цвет ссылок в секции текста */
 .text-section a {
     color: var(--color-text); /* Цвет ссылок соответствует цвету текста */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-.text-section a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-/* Стили для кнопки переключения жирного текста */
-#toggleBoldButton {
-    background-color: var(--color-secondary); /* Голубой фон */
-    color: var(--color-text-white); /* Белый текст */
-    border: none; /* Убираем границы */
-    padding: var(--padding-small) var(--padding-medium); /* Отступы внутри кнопки */
-    border-radius: 4px; /* Скругление углов */
-    cursor: pointer; /* Курсор в виде указателя */
-    margin-bottom: var(--padding-medium); /* Отступ снизу */
-}
-
-#toggleBoldButton:hover {
-    background-color: #2980b9; /* Темнее голубой при наведении */
 }
 
 /* Секция скриншотов */
@@ -196,11 +205,9 @@ section {
     text-align: center; /* Выравнивание текста по центру */
 }
 
-/* Регулировки для текста в секции скриншотов */
-.screenshots-section h3 {
-    font-size: var(--font-size-large); /* Большой текст для заголовков */
-    line-height: var(--line-height-large); /* Расширенный межстрочный интервал */
-    color: var(--color-text); /* Тёмный цвет текста */
+/* Цвет ссылок в секции скриншотов */
+.screenshots-section a {
+    color: var(--color-text); /* Цвет ссылок соответствует цвету текста */
 }
 
 /* Контейнер для миниатюр */
@@ -248,20 +255,9 @@ footer {
     padding: var(--padding-medium) 0; /* Отступы сверху и снизу */
 }
 
-/* Регулировки для текста в подвале */
-footer p {
-    font-size: var(--font-size-medium); /* Средний текст для абзацев */
-    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
-    color: var(--color-text-white); /* Белый цвет текста */
-}
-
+/* Цвет ссылок в подвале */
 footer a {
     color: var(--color-text-white); /* Белый цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
 }
 
 /* Кнопки прокрутки */
