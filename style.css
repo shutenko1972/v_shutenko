@@ -62,11 +62,8 @@ section {
     background-position: center; /* Центрировать картинку */
     color: #333; /* Темный цвет текста */
     min-height: 100vh; /* Секция занимает всю высоту экрана */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* Текст выровнен по левой стороне */
     text-align: left; /* Текст выровнен по левой стороне */
+    transition: background-image 1s ease-in-out; /* Плавный переход фоновой картинки */
 }
 
 /* Секция 1 с фоновой картинкой */
@@ -86,12 +83,12 @@ section {
 
 /* Секция 4 с фоновой картинкой */
 #section4 {
-    background-image: url('images/Image4.jpg'); /* Путь к картинке в папке images */
+    background-image: url('images/section4.jpg'); /* Путь к картинке в папке images */
 }
 
 /* Секция 5 с фоновой картинкой */
 #section5 {
-    background-image: url('images/Image5.jpg'); /* Путь к картинке в папке images */
+    background-image: url('images/section5.jpg'); /* Путь к картинке в папке images */
 }
 
 /* Подвал */
