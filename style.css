@@ -65,7 +65,30 @@ section {
     text-align: left; /* Текст выровнен по левой стороне */
 }
 
-/* Контейнер для картинок */
+/* Контейнер для профиля в секции 1 */
+.profile-container {
+    display: flex; /* Используем Flexbox */
+    justify-content: space-between; /* Распределение между текстом и картинкой */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 40px; /* Расстояние между текстом и картинкой */
+}
+
+.profile-text {
+    flex: 1; /* Текст занимает оставшееся пространство */
+}
+
+.profile-image {
+    max-width: 300px; /* Максимальная ширина аватарки */
+    width: 100%; /* Адаптивная ширина */
+}
+
+.profile-image img {
+    width: 100%; /* Картинка занимает всю ширину контейнера */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 10px; /* Скругление углов */
+}
+
+/* Контейнер для картинок (секции 2 и 3) */
 .image-container {
     display: flex; /* Используем Flexbox */
     justify-content: space-between; /* Равномерное распределение */
@@ -75,6 +98,26 @@ section {
 }
 
 .image-container img {
+    max-width: 48%; /* Картинки занимают почти половину ширины контейнера */
+    height: auto; /* Сохраняем пропорции */
+    object-fit: cover; /* Картинки заполняют пространство без искажений */
+}
+
+/* Контейнер для картинок (секция 4) */
+.image-grid {
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Картинки в столбик */
+    gap: 20px; /* Расстояние между рядами */
+    width: 100%; /* Контейнер занимает всю ширину секции */
+}
+
+.image-row {
+    display: flex; /* Картинки в ряд */
+    justify-content: space-between; /* Равномерное распределение */
+    gap: 20px; /* Расстояние между картинками */
+}
+
+.image-row img {
     max-width: 48%; /* Картинки занимают почти половину ширины контейнера */
     height: auto; /* Сохраняем пропорции */
     object-fit: cover; /* Картинки заполняют пространство без искажений */
@@ -102,12 +145,22 @@ section {
         padding: 20px; /* Уменьшаем отступы для мобильных */
     }
 
-    .image-container {
+    .profile-container {
+        flex-direction: column; /* Текст и картинка в столбик на мобильных */
+        align-items: center; /* Центрирование */
+        gap: 20px; /* Уменьшаем расстояние */
+    }
+
+    .profile-image {
+        max-width: 100%; /* Картинка занимает всю ширину на мобильных */
+    }
+
+    .image-container, .image-row {
         flex-direction: column; /* Картинки в столбик на мобильных */
         gap: 10px; /* Уменьшаем расстояние между картинками */
     }
 
-    .image-container img {
+    .image-container img, .image-row img {
         max-width: 100%; /* Картинки занимают всю ширину на мобильных */
     }
 }
