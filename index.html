@@ -33,6 +33,7 @@
 
             <!-- Вторая секция: Текст -->
             <section class="text-section">
+                <button id="toggleBoldButton">Жирный текст</button> <!-- Кнопка для переключения жирного текста -->
                 <h3 class="text-large text-dark margin-bottom-medium">Образование</h3>
                 <p class="text-medium text-dark margin-bottom-small">Среднее специальное образование</p>
                 <p class="text-small text-dark margin-bottom-medium">- Муниципальное общеобразовательное учреждение - средняя общеобразовательная школа с. Карпенка Краснокутского района Саратовской области</p>
@@ -123,5 +124,15 @@
             <p class="text-medium text-white">&copy; 2024 Все права защищены</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript для переключения жирного текста
+        const toggleBoldButton = document.getElementById('toggleBoldButton');
+        const textSection = document.querySelector('.text-section');
+
+        toggleBoldButton.addEventListener('click', () => {
+            textSection.classList.toggle('bold-text'); // Переключаем класс bold-text
+        });
+    </script>
 </body>
 </html>

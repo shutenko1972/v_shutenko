@@ -93,25 +93,22 @@ section {
     overflow: hidden; /* Скрываем размытые края */
 }
 
-/* Размытие краёв изображения в секции профиля */
-.profile-section::after {
-    content: '';
-    position: absolute;
-    bottom: -10px; /* Смещаем вниз для размытия */
-    left: 0,
-    right: 0,
-    height: 20px; /* Высота размытия */
-    background: inherit; /* Наследуем фон */
-    filter: blur(10px); /* Размытие */
+/* Регулировки для текста в секции профиля */
+.profile-section h1 {
+    font-size: var(--font-size-xlarge); /* Очень большой текст для заголовка */
+    line-height: var(--line-height-large); /* Расширенный межстрочный интервал */
 }
 
-/* Ссылки в секции профиля */
+.profile-section h2 {
+    font-size: var(--font-size-medium); /* Средний текст для подзаголовков */
+    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+}
+
 .profile-section a {
     color: var(--color-text-white); /* Белый цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
 }
 
-/* Подчеркивание ссылок при наведении в секции профиля */
 .profile-section a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
@@ -150,32 +147,46 @@ section {
     overflow: hidden; /* Скрываем размытые края */
 }
 
-/* Полупрозрачный фон для текста */
-.text-section::before {
-    content: '';
-    position: absolute;
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
-    z-index: 1; /* Фон под текстом */
-}
-
-/* Весь текст во второй секции жирный */
-.text-section {
+/* Класс для включения жирного текста */
+.text-section.bold-text {
     font-weight: bold; /* Жирный текст */
 }
 
-/* Ссылки во второй секции */
+/* Регулировки для текста в секции текста */
+.text-section h3 {
+    font-size: var(--font-size-large); /* Большой текст для заголовков */
+    line-height: var(--line-height-large); /* Расширенный межстрочный интервал */
+    color: var(--color-text); /* Тёмный цвет текста */
+}
+
+.text-section p {
+    font-size: var(--font-size-medium); /* Средний текст для абзацев */
+    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+    color: var(--color-text); /* Тёмный цвет текста */
+}
+
 .text-section a {
     color: var(--color-text); /* Цвет ссылок соответствует цвету текста */
     text-decoration: none; /* Убираем подчеркивание */
 }
 
-/* Подчеркивание ссылок при наведении во второй секции */
 .text-section a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Стили для кнопки переключения жирного текста */
+#toggleBoldButton {
+    background-color: var(--color-secondary); /* Голубой фон */
+    color: var(--color-text-white); /* Белый текст */
+    border: none; /* Убираем границы */
+    padding: var(--padding-small) var(--padding-medium); /* Отступы внутри кнопки */
+    border-radius: 4px; /* Скругление углов */
+    cursor: pointer; /* Курсор в виде указателя */
+    margin-bottom: var(--padding-medium); /* Отступ снизу */
+}
+
+#toggleBoldButton:hover {
+    background-color: #2980b9; /* Темнее голубой при наведении */
 }
 
 /* Секция скриншотов */
@@ -183,6 +194,13 @@ section {
     background-color: var(--color-background); /* Светло-серый фон */
     padding: var(--padding-large); /* Внутренние отступы */
     text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Регулировки для текста в секции скриншотов */
+.screenshots-section h3 {
+    font-size: var(--font-size-large); /* Большой текст для заголовков */
+    line-height: var(--line-height-large); /* Расширенный межстрочный интервал */
+    color: var(--color-text); /* Тёмный цвет текста */
 }
 
 /* Контейнер для миниатюр */
@@ -230,13 +248,18 @@ footer {
     padding: var(--padding-medium) 0; /* Отступы сверху и снизу */
 }
 
-/* Ссылки в подвале */
+/* Регулировки для текста в подвале */
+footer p {
+    font-size: var(--font-size-medium); /* Средний текст для абзацев */
+    line-height: var(--line-height-medium); /* Стандартный межстрочный интервал */
+    color: var(--color-text-white); /* Белый цвет текста */
+}
+
 footer a {
     color: var(--color-text-white); /* Белый цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
 }
 
-/* Подчеркивание ссылок при наведении */
 footer a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
