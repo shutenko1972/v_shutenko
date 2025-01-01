@@ -8,6 +8,14 @@ body {
     background-color: #f4f4f4; /* Цвет фона */
 }
 
+body {
+            display: flex; /* Включаем flexbox для выравнивания */
+            justify-content: center; /* Центрируем по горизонтали */
+            align-items: center; /* Центрируем по вертикали */
+            height: 100vh; /* Задаём высоту body равной высоте экрана */
+            margin: 0; /* Убираем отступы по умолчанию */
+        }
+
 /* Стили для заголовка h1 */
 h1 {
     font-size: 33px; /* Размер шрифта */
