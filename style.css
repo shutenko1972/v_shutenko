@@ -1,125 +1,137 @@
-/* Общие стили */
+/* Общие стили для всего документа */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    color: #333; /* Темный цвет текста */
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif; /* Шрифт для всего текста */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    line-height: 1; /* Межстрочный интервал */
+    color: #333; /* Цвет текста */
+    background-color: #f4f4f4; /* Цвет фона */
 }
 
-/* Заголовок h1 */
+/* Стили для заголовка h1 */
 h1 {
-    font-size: 33px; /* Размер текста */
-    color: #333; /* Темный цвет текста */
-    margin: 0; /* Убираем отступы */
-    padding: 5px 0; /* Отступы внутри */
-    text-align: center; /* Центрируем заголовок */
-    background-color: #ffffff; /* Белый фон */
+    font-size: 33px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: transparent; /* Прозрачный фон (убрали белый фон) */
     font-weight: bold; /* Жирный шрифт */
 }
 
-/* Заголовок h2 */
+/* Стили для заголовка h2 */
 h2 {
-    font-size: 28px; /* Размер текста */
-    color: #333; /* Темный цвет текста */
-    margin: 0; /* Убираем отступы */
-    padding: 10px 0; /* Отступы внутри */
+    font-size: 28px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 10px 0; /* Внутренние отступы сверху и снизу */
     font-weight: bold; /* Жирный шрифт */
 }
 
-/* Заголовок h3 */
+/* Стили для заголовка h3 */
 h3 {
-    font-size: 22px; /* Размер текста */
-    color: #333; /* Темный цвет текста */
-    margin: 0; /* Убираем отступы */
-    padding: 5px 0; /* Отступы внутри */
+    font-size: 22px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 5px 0; /* Внутренние отступы сверху и снизу */
     font-weight: bold; /* Жирный шрифт */
 }
 
-/* Параграф p */
+/* Стили для параграфа p */
 p {
-    font-size: 16px; /* Размер текста */
-    color: #333; /* Темный цвет текста */
-    margin: 0 0 8px 0; /* Отступ снизу */
-    padding: 0; /* Отступы внутри */
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin: 0 0 8px 0; /* Внешний отступ снизу */
+    padding: 0; /* Убираем внутренние отступы */
     line-height: 1.5; /* Межстрочный интервал */
 }
 
-/* Ссылки */
+/* Стили для ссылок */
 a {
     color: inherit; /* Цвет ссылки совпадает с цветом текста */
-    text-decoration: none; /* Убрать подчеркивание */
+    text-decoration: none; /* Убираем подчеркивание */
 }
 
 a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
 
-/* Шапка с иконками */
+/* Стили для шапки сайта */
 .programming-header {
-    background-color: #ffffff; /* Белый фон */
-    color: #333; /* Темный цвет текста */
-    padding: 20px 0; /* Отступы внутри */
-    text-align: center;
-    position: relative; /* Для позиционирования иконок */
+    background-image: url('images/header.png'); /* Фоновая картинка */
+    background-size: cover; /* Растягиваем картинку на весь фон */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat; /* Запрещаем повторение картинки */
+    color: #333; /* Цвет текста */
+    padding: 20px 0; /* Внутренние отступы сверху и снизу */
+    text-align: center; /* Выравнивание текста по центру */
+    position: relative; /* Относительное позиционирование */
 }
 
+/* Контейнер для иконок в шапке */
 .programming-header .programming-icons {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Используем Flexbox для выравнивания */
+    justify-content: center; /* Выравнивание по центру */
     gap: 10px; /* Расстояние между иконками */
-    margin-bottom: 20px; /* Отступ снизу, чтобы отделить иконки от текста */
-    flex-wrap: wrap; /* Если иконок много, они переносятся на новую строку */
+    margin-bottom: 20px; /* Отступ снизу */
+    flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
 }
 
+/* Стили для иконок в шапке */
 .programming-header .icon {
-    width: 30px; /* Размер иконок */
-    height: 30px;
+    width: 30px; /* Ширина иконки */
+    height: 30px; /* Высота иконки */
 }
 
+/* Контейнер для содержимого шапки */
 .programming-header .header-content {
-    position: relative;
-    z-index: 2; /* Чтобы текст был поверх иконок */
+    position: relative; /* Относительное позиционирование */
+    z-index: 2; /* Уровень слоя (чтобы текст был поверх иконок) */
 }
 
-/* Подвал с иконками */
+/* Стили для подвала сайта */
 .programming-footer {
-    background-color: #ffffff; /* Белый фон */
-    color: #333; /* Темный цвет текста */
-    text-align: center;
-    padding: 20px 0; /* Отступы внутри */
-    margin: 0; /* Убираем отступы */
-    position: relative; /* Для позиционирования иконок */
+    background-image: url('images/header.png'); /* Фоновая картинка */
+    background-size: cover; /* Растягиваем картинку на весь фон */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat; /* Запрещаем повторение картинки */
+    color: #333; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px 0; /* Внутренние отступы сверху и снизу */
+    margin: 0; /* Убираем внешние отступы */
+    position: relative; /* Относительное позиционирование */
 }
 
+/* Контейнер для содержимого подвала */
 .programming-footer .footer-content {
-    position: relative;
-    z-index: 2; /* Чтобы текст был поверх иконок */
+    position: relative; /* Относительное позиционирование */
+    z-index: 2; /* Уровень слоя (чтобы текст был поверх иконок) */
 }
 
+/* Контейнер для иконок в подвале */
 .programming-footer .programming-icons {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Используем Flexbox для выравнивания */
+    justify-content: center; /* Выравнивание по центру */
     gap: 10px; /* Расстояние между иконками */
     margin-top: 10px; /* Отступ сверху */
-    flex-wrap: wrap; /* Если иконок много, они переносятся на новую строку */
+    flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
 }
 
+/* Стили для иконок в подвале */
 .programming-footer .icon {
-    width: 30px; /* Размер иконок */
-    height: 30px;
+    width: 30px; /* Ширина иконки */
+    height: 30px; /* Высота иконки */
 }
 
-/* Секции */
+/* Стили для секций */
 section {
-    padding: 40px; /* Отступы внутри */
-    margin: 0; /* Убираем отступы между секциями */
-    background-size: cover; /* Растянуть картинку на всю секцию */
-    background-position: center; /* Центрировать картинку */
-    color: #333; /* Темный цвет текста */
+    padding: 40px; /* Внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    background-size: cover; /* Растягиваем фоновую картинку на всю секцию */
+    background-position: center; /* Центрируем фоновую картинку */
+    color: #333; /* Цвет текста */
     min-height: 100vh; /* Секция занимает всю высоту экрана */
-    text-align: left; /* Текст выровнен по левой стороне */
+    text-align: left; /* Выравнивание текста по левому краю */
 }
 
 /* Контейнер для профиля в секции 1 */
