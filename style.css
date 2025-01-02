@@ -264,5 +264,5 @@ section {
 
 /* Секция 5 с фоновой картинкой */
 #section5 {
-    background-image: url('images/section5.jpg'); /* Путь к картинке в папке images */
+    background-image: url('images/section5.png'); /* Путь к картинке в папке images */
 }
