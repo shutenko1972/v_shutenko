@@ -79,7 +79,7 @@ a:hover {
 .programming-header .programming-icons {
     display: flex; /* Используем Flexbox для выравнивания */
     justify-content: center; /* Выравнивание по центру */
-    gap: 200px; /* Расстояние между иконками */
+    gap: 10px; /* Расстояние между иконками */
     margin-bottom: 20px; /* Отступ снизу */
     flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
 }
@@ -119,7 +119,7 @@ a:hover {
 .programming-footer .programming-icons {
     display: flex; /* Используем Flexbox для выравнивания */
     justify-content: center; /* Выравнивание по центру */
-    gap: 200px; /* Расстояние между иконками */
+    gap: 10px; /* Расстояние между иконками */
     margin-top: 10px; /* Отступ сверху */
     flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
 }
