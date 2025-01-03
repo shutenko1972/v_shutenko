@@ -24,11 +24,10 @@ body {
     padding: 15px 20px; /* Отступы внутри шапки */
 }
 
-.logo {
+.header-content .logo {
     height: 100px; /* Фиксированная высота логотипа (не более 100px) */
     width: auto; /* Сохраняем пропорции */
-    margin-right: 20px; /* Отступ справа от логотипа */
-    flex-shrink: 0; /* Запрещаем логотипу сжиматься */
+    /* margin-right: 5px; /* Отступ справа от логотипа */
 }
 
 .header-text {
