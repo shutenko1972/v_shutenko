@@ -4,32 +4,89 @@ body {
     margin: 0; /* Убираем внешние отступы */
     padding: 0; /* Убираем внутренние отступы */
     line-height: 1; /* Межстрочный интервал */
-    color: #969;  /* Цвет текста */ 
-    background-color: #f4f4f4; /* Цвет фона */
+    color: #333; /* Цвет текста по умолчанию */
+    background-color: #f4f4f4; /* Цвет фона страницы */
 }
 
- /* Стили для контейнера, который центрирует предложение */
+/* Стили для шапки (Header) */
+.header-style {
+    background-image: url('images/header.png'); /* Фоновая картинка для шапки */
+    background-size: cover; /* Растягиваем картинку на весь фон */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat; /* Запрещаем повторение картинки */
+    color: #FFF; /* Цвет текста по умолчанию */
+	background-color: #000; /* Цвет фона для секции 1 (отключен по умолчанию) */
+}
+
+/* Стили для подвала (Footer) */
+.footer-style {
+    background-image: url('images/header.png'); /* Фоновая картинка для подвала */
+    background-size: cover; /* Растягиваем картинку на весь фон */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat; /* Запрещаем повторение картинки */
+    color: #FFF; /* Цвет текста по умолчанию */
+	background-color: #000; /* Цвет фона для секции 1 (отключен по умолчанию) */
+}
+
+/* Общие стили для всех секций */
+.section-style {
+    background-size: cover; /* Растягиваем фоновую картинку на всю секцию */
+    background-position: center; /* Центрируем фоновую картинку */
+    color: #333; /* Цвет текста по умолчанию */
+}
+
+/* Стили для секции 1 */
+.section1-style {
+    background-image: url('images/Profile.png'); /* Фоновая картинка для секции 1 */
+    /* background-color: #F8F9FA;  Цвет фона для секции 1 (отключен по умолчанию) */
+}
+
+/* Стили для секции 2 */
+.section2-style {
+    background-image: url('images/section2.jpg'); /* Фоновая картинка для секции 2 */
+    /* background-color: #E9F5E9;  Цвет фона для секции 2 (отключен по умолчанию) */
+}
+
+/* Стили для секции 3 */
+.section3-style {
+    background-image: url('images/section3.png'); /* Фоновая картинка для секции 3 */
+    /* background-color: #E3F2FD;  Цвет фона для секции 3 (отключен по умолчанию) */
+}
+
+/* Стили для секции 4 */
+.section4-style {
+    background-image: url('images/section4.jpg'); /* Фоновая картинка для секции 4 */
+    /* background-color: #FFF3E0;  Цвет фона для секции 4 (отключен по умолчанию) */
+}
+
+/* Стили для секции 5 */
+.section5-style {
+    background-image: url('images/section5.png'); /* Фоновая картинка для секции 5 */
+    /* background-color: #FCE4EC;  Цвет фона для секции 5 (отключен по умолчанию) */
+}
+
+/* Стили для центрированного текста */
 .centered {
-            width: 100%; /* Ширина контейнера */
-            text-align: center; /* Центрируем текст по горизонтали */
-            margin: 10px auto; /* Отступы сверху и снизу 20px, автоматические отступы по бокам */
-        }
+    width: 100%; /* Ширина контейнера */
+    text-align: center; /* Центрируем текст по горизонтали */
+    margin: 10px auto; /* Отступы сверху и снизу 10px, автоматические отступы по бокам */
+}
 
 /* Стили для заголовка h1 */
 h1 {
     font-size: 33px; /* Размер шрифта */
-    color: #333; /* Цвет текста */
+    color: inherit; /* Наследует цвет текста от родителя */
     margin: 0; /* Убираем внешние отступы */
     padding: 0; /* Убираем внутренние отступы */
     text-align: center; /* Выравнивание текста по центру */
-    background-color: transparent; /* Прозрачный фон (убрали белый фон) */
+    background-color: transparent; /* Прозрачный фон */
     font-weight: bold; /* Жирный шрифт */
 }
 
 /* Стили для заголовка h2 */
 h2 {
     font-size: 28px; /* Размер шрифта */
-    color: #333; /* Цвет текста */
+    color: inherit; /* Наследует цвет текста от родителя */
     margin: 0; /* Убираем внешние отступы */
     padding: 5px 0; /* Внутренние отступы сверху и снизу */
     font-weight: bold; /* Жирный шрифт */
@@ -38,7 +95,7 @@ h2 {
 /* Стили для заголовка h3 */
 h3 {
     font-size: 22px; /* Размер шрифта */
-    color: #333; /* Цвет текста */
+    color: inherit; /* Наследует цвет текста от родителя */
     margin: 0; /* Убираем внешние отступы */
     padding: 5px 0; /* Внутренние отступы сверху и снизу */
     font-weight: bold; /* Жирный шрифт */
@@ -47,7 +104,7 @@ h3 {
 /* Стили для параграфа p */
 p {
     font-size: 16px; /* Размер шрифта */
-    color: #333; /* Цвет текста */
+    color: inherit; /* Наследует цвет текста от родителя */
     margin: 0 0 8px 0; /* Внешний отступ снизу */
     padding: 0; /* Убираем внутренние отступы */
     line-height: 1.5; /* Межстрочный интервал */
@@ -63,80 +120,25 @@ a:hover {
     text-decoration: underline; /* Подчеркивание при наведении */
 }
 
-/* Стили для шапки сайта */
+/* Стили для шапки (программирование) */
 .programming-header {
-    background-image: url('images/header.png'); /* Фоновая картинка */
-    background-size: cover; /* Растягиваем картинку на весь фон */
-    background-position: center; /* Центрируем картинку */
-    background-repeat: no-repeat; /* Запрещаем повторение картинки */
-    color: #333; /* Цвет текста */
     padding: 15px 0; /* Внутренние отступы сверху и снизу */
     text-align: center; /* Выравнивание текста по центру */
     position: relative; /* Относительное позиционирование */
 }
 
-/* Контейнер для иконок в шапке */
-.programming-header .programming-icons {
-    display: flex; /* Используем Flexbox для выравнивания */
-    justify-content: center; /* Выравнивание по центру */
-    gap: 10px; /* Расстояние между иконками */
-    margin-bottom: 20px; /* Отступ снизу */
-    flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
-}
-
-/* Стили для иконок в шапке */
-.programming-header .icon {
-    width: 30px; /* Ширина иконки */
-    height: 30px; /* Высота иконки */
-}
-
-/* Контейнер для содержимого шапки */
-.programming-header .header-content {
-    position: relative; /* Относительное позиционирование */
-    z-index: 2; /* Уровень слоя (чтобы текст был поверх иконок) */
-}
-
-/* Стили для подвала сайта */
+/* Стили для подвала (программирование) */
 .programming-footer {
-    background-image: url('images/header.png'); /* Фоновая картинка */
-    background-size: cover; /* Растягиваем картинку на весь фон */
-    background-position: center; /* Центрируем картинку */
-    background-repeat: no-repeat; /* Запрещаем повторение картинки */
-    color: #333; /* Цвет текста */
     text-align: center; /* Выравнивание текста по центру */
     padding: 15px 0; /* Внутренние отступы сверху и снизу */
     margin: 0; /* Убираем внешние отступы */
     position: relative; /* Относительное позиционирование */
-}
-
-/* Контейнер для содержимого подвала */
-.programming-footer .footer-content {
-    position: relative; /* Относительное позиционирование */
-    z-index: 2; /* Уровень слоя (чтобы текст был поверх иконок) */
-}
-
-/* Контейнер для иконок в подвале */
-.programming-footer .programming-icons {
-    display: flex; /* Используем Flexbox для выравнивания */
-    justify-content: center; /* Выравнивание по центру */
-    gap: 10px; /* Расстояние между иконками */
-    margin-top: 10px; /* Отступ сверху */
-    flex-wrap: wrap; /* Перенос иконок на новую строку, если не хватает места */
-}
-
-/* Стили для иконок в подвале */
-.programming-footer .icon {
-    width: 30px; /* Ширина иконки */
-    height: 30px; /* Высота иконки */
 }
 
 /* Стили для секций */
 section {
     padding: 40px; /* Внутренние отступы */
     margin: 0; /* Убираем внешние отступы */
-    background-size: cover; /* Растягиваем фоновую картинку на всю секцию */
-    background-position: center; /* Центрируем фоновую картинку */
-    color: #333; /* Цвет текста */
     min-height: 100vh; /* Секция занимает всю высоту экрана */
     text-align: left; /* Выравнивание текста по левому краю */
 }
@@ -149,10 +151,12 @@ section {
     gap: 40px; /* Расстояние между элементами */
 }
 
+/* Текст профиля */
 .profile-text {
     flex: 1; /* Текст занимает оставшееся пространство */
 }
 
+/* Изображение профиля */
 .profile-image {
     max-width: 300px; /* Максимальная ширина аватарки */
     width: 100%; /* Адаптивная ширина */
@@ -195,7 +199,7 @@ section {
 }
 
 .image-row img {
-    max-width: 48%; /* Картинки занимают почти половину ширину контейнера */
+    max-width: 48%; /* Картинки занимают почти половину ширины контейнера */
     height: auto; /* Сохраняем пропорции */
     object-fit: cover; /* Картинки заполняют пространство без искажений */
 }
@@ -240,29 +244,4 @@ section {
     .image-container img, .image-row img {
         max-width: 100%; /* Картинки занимают всю ширину на мобильных */
     }
-}
-
-/* Секция 1 с фоновой картинкой */
-#section1 {
-    background-image: url('images/Profile.png'); /* Путь к картинке в папке images */
-}
-
-/* Секция 2 с фоновой картинкой */
-#section2 {
-    background-image: url('images/section2.jpg'); /* Путь к картинке в папке images */
-}
-
-/* Секция 3 с фоновой картинкой */
-#section3 {
-    background-image: url('images/section3.png'); /* Путь к картинке в папке images */
-}
-
-/* Секция 4 с фоновой картинкой */
-#section4 {
-    background-image: url('images/section4.jpg'); /* Путь к картинке в папке images */
-}
-
-/* Секция 5 с фоновой картинкой */
-#section5 {
-    background-image: url('images/section5.png'); /* Путь к картинке в папке images */
 }
