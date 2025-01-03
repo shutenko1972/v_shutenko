@@ -20,17 +20,19 @@ body {
 
 .header-content {
     display: flex;
-    align-items: center;
-    padding: 15px 20px;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    padding: 15px 20px; /* Отступы внутри шапки */
 }
 
 .logo {
-    height: 80px; /* Высота логотипа */
+    height: 50px; /* Фиксированная высота логотипа */
+    width: auto; /* Сохраняем пропорции */
     margin-right: 20px; /* Отступ справа от логотипа */
+    flex-shrink: 0; /* Запрещаем логотипу сжиматься */
 }
 
 .header-text {
-    flex: 1;
+    flex: 1; /* Текст занимает оставшееся пространство */
 }
 
 /* Стили для подвала (Footer) */
