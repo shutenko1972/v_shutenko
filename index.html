@@ -12,15 +12,30 @@
     <link rel="manifest" href="site.webmanifest" />
 </head>
 <body>
-   <header class="programming-header header-style">
-    <div class="header-content" style="display: flex; align-items: center;">
-        <img src="images/Logo.png" alt="Логотип" class="logo" style="height: 100px; width: auto; margin-right: 15px;">
-        <div class="header-text">
-            <h2>Специалист по тестированию</h2>
-            <h2>Область деятельности информационные технологии</h2>
+    <header class="programming-header header-style">
+        <div class="header-content" style="display: flex; align-items: center;">
+            <img src="images/Logo.png" alt="Логотип" class="logo" style="height: 50px; width: auto; margin-right: 15px;">
+            <div class="header-text">
+                <h2>Специалист по тестированию</h2>
+                <h2>Область деятельности информационные технологии</h2>
+            </div>
         </div>
-    </div>
-</header>
+        <style>
+            /* Адаптация для мобильных устройств */
+            @media (max-width: 768px) {
+                .header-content {
+                    flex-direction: column; /* Элементы располагаются вертикально */
+                    align-items: center; /* Центрирование элементов */
+                    text-align: center; /* Текст по центру */
+                }
+                .header-content .logo {
+                    margin-right: 0; /* Убираем отступ справа */
+                    margin-bottom: 15px; /* Добавляем отступ снизу */
+                }
+            }
+        </style>
+    </header>
+
     <section id="section1" class="section-style section1-style">
         <div class="profile-container">
             <div class="profile-image">
@@ -62,6 +77,7 @@
             </div>
         </div>
     </section>
+
     <section id="section2" class="section-style section2-style">
         <h2 style="margin-bottom: 30px;">Образование</h2>
         <h3>Среднее специальное образование</h3>
@@ -75,6 +91,7 @@
             <img src="images/Innopolis.png" alt="Innopolis">
         </div>
     </section>
+
     <section id="section3" class="section-style section3-style">
         <h2 style="margin-bottom: 30px;">Crowd Testing</h2>
         <p><strong>Участие в проектах Crowd Testing</strong></p>
@@ -85,6 +102,7 @@
             <img src="images/The_mobile_application.jpg" alt="The Mobile Application">
         </div>
     </section>
+
     <section id="section4" class="section-style section4-style">
         <div class="profile-container">
             <div class="profile-text">
@@ -132,6 +150,7 @@
             </div>
         </div>
     </section>
+
     <section id="section5" class="section-style section5-style">
         <div class="centered">
             <h2 style="margin-top: 100px; margin-bottom: 50px;">Работа в компании ДИАЛЛ АЛЬЯНС</h2>
@@ -152,6 +171,7 @@
             </div>
         </div>
     </section>
+
     <footer class="programming-footer footer-style">
         <div class="footer-content">
             <p>Россия. Саратовская область, г. Красный Кут</p>

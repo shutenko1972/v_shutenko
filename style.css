@@ -27,7 +27,7 @@ body {
 .header-content .logo {
     height: 100px; /* Фиксированная высота логотипа (не более 100px) */
     width: auto; /* Сохраняем пропорции */
-    /* margin-right: 5px; /* Отступ справа от логотипа */
+    margin-right: 15px; /* Отступ справа от логотипа */
 }
 
 .header-text {
