@@ -1,247 +1,257 @@
 /* Общие стили для всего документа */
 body {
-    font-family: Arial, sans-serif; /* Шрифт для всего текста */
-    margin: 0; /* Убираем внешние отступы */
-    padding: 0; /* Убираем внутренние отступы */
-    line-height: 1; /* Межстрочный интервал */
-    color: #333; /* Цвет текста по умолчанию */
-    background-color: #f4f4f4; /* Цвет фона страницы */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 /* Стили для шапки (Header) */
 .header-style {
-    background-image: url('images/header.png'); /* Фоновая картинка для шапки */
-    background-size: cover; /* Растягиваем картинку на весь фон */
-    background-position: center; /* Центрируем картинку */
-    background-repeat: no-repeat; /* Запрещаем повторение картинки */
-    color: #FFF; /* Цвет текста по умолчанию */
-	background-color: #000; /* Цвет фона для секции 1 (отключен по умолчанию) */
+    background-image: url('images/header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF;
+    background-color: #000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    height: 80px; /* Высота логотипа */
+    margin-right: 20px; /* Отступ справа от логотипа */
+}
+
+.header-text {
+    flex: 1;
 }
 
 /* Стили для подвала (Footer) */
 .footer-style {
-    background-image: url('images/header.png'); /* Фоновая картинка для подвала */
-    background-size: cover; /* Растягиваем картинку на весь фон */
-    background-position: center; /* Центрируем картинку */
-    background-repeat: no-repeat; /* Запрещаем повторение картинки */
-    color: #FFF; /* Цвет текста по умолчанию */
-	background-color: #000; /* Цвет фона для секции 1 (отключен по умолчанию) */
+    background-image: url('images/header.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF;
+    background-color: #000;
 }
 
 /* Общие стили для всех секций */
 .section-style {
-    background-size: cover; /* Растягиваем фоновую картинку на всю секцию */
-    background-position: center; /* Центрируем фоновую картинку */
-    color: #333; /* Цвет текста по умолчанию */
+    background-size: cover;
+    background-position: center;
+    color: #333;
 }
 
 /* Стили для секции 1 */
 .section1-style {
-    background-image: url('images/Profile.png'); /* Фоновая картинка для секции 1 */
-    /* background-color: #F8F9FA;  Цвет фона для секции 1 (отключен по умолчанию) */
+    background-image: url('images/Profile.png');
 }
 
 /* Стили для секции 2 */
 .section2-style {
-    background-image: url('images/section2.jpg'); /* Фоновая картинка для секции 2 */
-    /* background-color: #E9F5E9;  Цвет фона для секции 2 (отключен по умолчанию) */
+    background-image: url('images/section2.jpg');
 }
 
 /* Стили для секции 3 */
 .section3-style {
-    background-image: url('images/section3.png'); /* Фоновая картинка для секции 3 */
-    /* background-color: #E3F2FD;  Цвет фона для секции 3 (отключен по умолчанию) */
+    background-image: url('images/section3.png');
 }
 
 /* Стили для секции 4 */
 .section4-style {
-    background-image: url('images/section4.jpg'); /* Фоновая картинка для секции 4 */
-    /* background-color: #FFF3E0;  Цвет фона для секции 4 (отключен по умолчанию) */
+    background-image: url('images/section4.jpg');
 }
 
 /* Стили для секции 5 */
 .section5-style {
-    background-image: url('images/section5.png'); /* Фоновая картинка для секции 5 */
-    /* background-color: #FCE4EC;  Цвет фона для секции 5 (отключен по умолчанию) */
+    background-image: url('images/section5.png');
 }
 
 /* Стили для центрированного текста */
 .centered {
-    width: 100%; /* Ширина контейнера */
-    text-align: center; /* Центрируем текст по горизонтали */
-    margin: 10px auto; /* Отступы сверху и снизу 10px, автоматические отступы по бокам */
+    width: 100%;
+    text-align: center;
+    margin: 10px auto;
 }
 
 /* Стили для заголовка h1 */
 h1 {
-    font-size: 33px; /* Размер шрифта */
-    color: inherit; /* Наследует цвет текста от родителя */
-    margin: 0; /* Убираем внешние отступы */
-    padding: 0; /* Убираем внутренние отступы */
-    text-align: center; /* Выравнивание текста по центру */
-    background-color: transparent; /* Прозрачный фон */
-    font-weight: bold; /* Жирный шрифт */
+    font-size: 33px;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    font-weight: bold;
 }
 
 /* Стили для заголовка h2 */
 h2 {
-    font-size: 28px; /* Размер шрифта */
-    color: inherit; /* Наследует цвет текста от родителя */
-    margin: 0; /* Убираем внешние отступы */
-    padding: 5px 0; /* Внутренние отступы сверху и снизу */
-    font-weight: bold; /* Жирный шрифт */
+    font-size: 28px;
+    color: inherit;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: bold;
 }
 
 /* Стили для заголовка h3 */
 h3 {
-    font-size: 22px; /* Размер шрифта */
-    color: inherit; /* Наследует цвет текста от родителя */
-    margin: 0; /* Убираем внешние отступы */
-    padding: 5px 0; /* Внутренние отступы сверху и снизу */
-    font-weight: bold; /* Жирный шрифт */
+    font-size: 22px;
+    color: inherit;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: bold;
 }
 
 /* Стили для параграфа p */
 p {
-    font-size: 16px; /* Размер шрифта */
-    color: inherit; /* Наследует цвет текста от родителя */
-    margin: 0 0 8px 0; /* Внешний отступ снизу */
-    padding: 0; /* Убираем внутренние отступы */
-    line-height: 1.5; /* Межстрочный интервал */
+    font-size: 16px;
+    color: inherit;
+    margin: 0 0 8px 0;
+    padding: 0;
+    line-height: 1.5;
 }
 
 /* Стили для ссылок */
 a {
-    color: inherit; /* Цвет ссылки совпадает с цветом текста */
-    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    text-decoration: underline;
 }
 
 /* Стили для шапки (программирование) */
 .programming-header {
-    padding: 15px 0; /* Внутренние отступы сверху и снизу */
-    text-align: center; /* Выравнивание текста по центру */
-    position: relative; /* Относительное позиционирование */
+    padding: 15px 0;
+    text-align: center;
+    position: relative;
 }
 
 /* Стили для подвала (программирование) */
 .programming-footer {
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 15px 0; /* Внутренние отступы сверху и снизу */
-    margin: 0; /* Убираем внешние отступы */
-    position: relative; /* Относительное позиционирование */
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    position: relative;
 }
 
 /* Стили для секций */
 section {
-    padding: 40px; /* Внутренние отступы */
-    margin: 0; /* Убираем внешние отступы */
-    min-height: 100vh; /* Секция занимает всю высоту экрана */
-    text-align: left; /* Выравнивание текста по левому краю */
+    padding: 40px;
+    margin: 0;
+    min-height: 100vh;
+    text-align: left;
 }
 
 /* Контейнер для профиля в секции 1 */
 .profile-container {
-    display: flex; /* Используем Flexbox */
-    justify-content: flex-start; /* Выравнивание по левому краю */
-    align-items: flex-start; /* Выравнивание по верхнему краю */
-    gap: 40px; /* Расстояние между элементами */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
 }
 
 /* Текст профиля */
 .profile-text {
-    flex: 1; /* Текст занимает оставшееся пространство */
+    flex: 1;
 }
 
 /* Изображение профиля */
 .profile-image {
-    max-width: 300px; /* Максимальная ширина аватарки */
-    width: 100%; /* Адаптивная ширина */
-    order: -1; /* Фото будет первым элементом */
+    max-width: 300px;
+    width: 100%;
+    order: -1;
 }
 
 .profile-image img {
-    width: 100%; /* Картинка занимает всю ширину контейнера */
-    height: auto; /* Сохраняем пропорции */
-    border-radius: 10px; /* Скругление углов */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* Контейнер для картинок (секции 2 и 3) */
 .image-container {
-    display: flex; /* Используем Flexbox */
-    justify-content: space-between; /* Равномерное распределение */
-    align-items: center; /* Выравнивание по центру по вертикали */
-    width: 100%; /* Контейнер занимает всю ширину секции */
-    gap: 20px; /* Расстояние между картинками */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
 }
 
 .image-container img {
-    max-width: 48%; /* Картинки занимают почти половину ширины контейнера */
-    height: auto; /* Сохраняем пропорции */
-    object-fit: cover; /* Картинки заполняют пространство без искажений */
+    max-width: 48%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Контейнер для картинок (секция 4) */
 .image-grid {
-    display: flex; /* Используем Flexbox */
-    flex-direction: column; /* Картинки в столбик */
-    gap: 20px; /* Расстояние между рядами */
-    width: 100%; /* Контейнер занимает всю ширину секции */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
 .image-row {
-    display: flex; /* Картинки в ряд */
-    justify-content: space-between; /* Равномерное распределение */
-    gap: 20px; /* Расстояние между картинками */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .image-row img {
-    max-width: 48%; /* Картинки занимают почти половину ширины контейнера */
-    height: auto; /* Сохраняем пропорции */
-    object-fit: cover; /* Картинки заполняют пространство без искажений */
+    max-width: 48%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     h1 {
-        font-size: 32px; /* Уменьшаем размер заголовка для мобильных */
+        font-size: 32px;
     }
 
     h2 {
-        font-size: 28px; /* Уменьшаем размер заголовка для мобильных */
+        font-size: 28px;
     }
 
     h3 {
-        font-size: 20px; /* Уменьшаем размер заголовка для мобильных */
+        font-size: 20px;
     }
 
     p {
-        font-size: 14px; /* Уменьшаем размер текста для мобильных */
+        font-size: 14px;
     }
 
     section {
-        padding: 20px; /* Уменьшаем отступы для мобильных */
+        padding: 20px;
     }
 
     .profile-container {
-        flex-direction: column; /* Текст и картинка в столбик на мобильных */
-        align-items: center; /* Центрирование */
-        gap: 20px; /* Уменьшаем расстояние */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .profile-image {
-        max-width: 100%; /* Картинка занимает всю ширину на мобильных */
+        max-width: 100%;
     }
 
     .image-container, .image-row {
-        flex-direction: column; /* Картинки в столбик на мобильных */
-        gap: 10px; /* Уменьшаем расстояние между картинками */
+        flex-direction: column;
+        gap: 10px;
     }
 
     .image-container img, .image-row img {
-        max-width: 100%; /* Картинки занимают всю ширину на мобильных */
+        max-width: 100%;
     }
 }
